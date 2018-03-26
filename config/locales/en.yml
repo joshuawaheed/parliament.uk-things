@@ -46,7 +46,7 @@ en:
             surname:
               blank: 'Please enter a last name'
             on_behalf_of:
-              blank: "Please enter the names of the organisations"
+              blank: 'Please enter the names of the organisations'
             address_1:
               blank: 'Please enter first line of address'
             telephone:
@@ -76,9 +76,9 @@ en:
         hybrid_bill_individual_group_submission:
           attributes:
             first_name:
-              blank: "Please enter a first name"
+              blank: 'Please enter a first name'
             on_behalf_of:
-              blank: "Please enter a name for the group"
+              blank: 'Please enter a name for the group'
             surname:
               blank: 'Please enter a last name'
             address_1:
@@ -105,13 +105,70 @@ en:
             postcode:
               invalid: 'Please enter a valid post code'
   hybrid_bills:
+    # id relates committee business id for bill
+    id1:
+      # title
+      object_title: 'Object to the'
+      # show page
+      overview_a: 'Any individual, group of individuals, organisation or group of organisations affected by the High Speed Rail (West Midlands to Crewe) Bill can object to it.'
+      objecting_subtitle: 'Objecting to the bill'
+      objecting_a: 'To object to the High Speed Rail (West Midlands to Crewe) Bill you will need to download and complete our petition template. You can do this by petitioning on our website or by email, post or in person.'
+      objecting_b: 'We will ask for your name, address and examples of how you’re affected by the Bill.'
+      after_sending_petition_a: 'Once we’ve received your petition we’ll ask you to pay a £20 admin fee.'
+      after_sending_petition_b: 'We’ll publish your petition on our website. This will include your name and address.'
+      after_sending_petition_c: 'We’ll send your petition to HS2 Ltd, who may contact you to discuss it.'
+      after_sending_petition_d: 'We’ll also send your petition to the Department for Transport (DfT). They can challenge it if they don’t believe you are affected by the Bill'
+      after_sending_petition_e: 'You will usually be invited to give evidence to the committee about your petition. Hearings are scheduled for spring/summer 2018.'
+      # petition templates
+      template_online: 'HS2-Phase-2a-Petition-Template-Online.doc'
+      template_offline_ind: 'HS2-Phase-2a-Petition-Pack-Individuals.doc'
+      template_offline_grpind: 'HS2-Phase-2a-Petition-Pack-Group-Of-Individuals.doc'
+      template_offline_org: 'HS2-Phase-2a-Petition-Pack-Organisation.doc'
+      template_offline_grporg: 'HS2-Phase-2a-Petition-Pack-Group-Of-Organisations.doc'
+      # petition submission confirmation page
+      what_next_a: 'We’ll email you within 14 days about how to pay the £20 admin fee.'
+      what_next_b: 'We’ll publish your petition on our website. This will include your name and address.'
+      what_next_c: 'We’ll send your petition to HS2 Ltd, who may contact you to discuss it.'
+      what_next_d: 'We’ll also send your petition to the Department for Transport (DfT). They can challenge it if they don’t believe you are affected by the Bill'
+      what_next_e: 'You will usually be invited to give evidence to the committee about your petition. Hearings are scheduled for spring/summer 2018.'
+      # petition status
+      petition_status_pre: 'You can object from Tuesday 30 January 2018.'
+      petition_status_active: 'The deadline is 5pm on Monday 26 February 2018.'
+      petition_status_post: 'The deadline has passed.'
+    # id relates committee business id for additional provision 1
+    id2:
+      # title
+      object_title: 'Object to the Additional Provision of the'
+      # show page
+      overview_a: 'Any individual, group of individuals, organisation or group of organisations affected by the Additional Provision of the High Speed Rail (West Midlands to Crewe) Bill can object to it'
+      objecting_subtitle: 'Objecting to the Additional Provision'
+      objecting_a: 'To object to the Additional Provision of the High Speed Rail (West Midlands to Crewe) Bill you will need to download and complete our petition template. You can do this by petitioning on our website or by email, post or in person.'
+      objecting_b: 'We will ask for your name, address and examples of how you’re affected by the Additional Provision.'
+      after_sending_petition_a: 'Once we’ve received your petition we’ll ask you to pay a £20 admin fee, unless you paid it when objecting to the original bill'
+      after_sending_petition_b: 'We’ll publish your petition on our website. This will include your name and address.'
+      after_sending_petition_c: 'We’ll send your petition to HS2 Ltd, who may contact you to discuss it.'
+      after_sending_petition_d: 'We’ll also send your petition to the Department for Transport (DfT). They can challenge it if they don’t believe you are affected by the Additional Provision'
+      after_sending_petition_e: 'You will usually be invited to give evidence to the committee about your petition. Hearings are scheduled for spring/summer 2018.'
+      # petition templates
+      template_online: 'HS2-Phase-2a-Additional-Provision-Petition-Template-Online.doc'
+      template_offline_ind: 'HS2-Phase-2a-Additional-Provision-Petition-Pack-Individuals.doc'
+      template_offline_grpind: 'HS2-Phase-2a-Additional-Provision-Petition-Pack-Group-Of-Individuals.doc'
+      template_offline_org: 'HS2-Phase-2a-Additional-Provision-Petition-Pack-Organisation.doc'
+      template_offline_grporg: 'HS2-Phase-2a-Additional-Provision-Petition-Pack-Group-Of-Organisations.doc'
+      # petition submission confirmation
+      what_next_a: 'We’ll email you within 14 days about how to pay the £20 admin fee, unless you paid it when objecting to the original bill'
+      what_next_b: 'We’ll publish your petition on our website. This will include your name and address.'
+      what_next_c: 'We’ll send your petition to HS2 Ltd, who may contact you to discuss it.'
+      what_next_d: 'We’ll also send your petition to the Department for Transport (DfT). They can challenge it if they don’t believe you are affected by the Additional Provision'
+      what_next_e: 'You will usually be invited to give evidence to the committee about your petition. Hearings are scheduled for spring/summer 2018.'
+      # petition status
+      petition_status_pre: 'You can object from Thursday 29 March 2018.'
+      petition_status_active: 'The deadline is 5pm on Friday 27 April 2018.'
+      petition_status_post: 'The deadline has passed.'
     # Global hybrid bills translations
     hs2: 'High Speed Rail (West Midlands to Crewe)'
     hs2_bill: 'bill'
-    hs2_bill_ap: ‘Additional Provision’
-    hs2_ap: 'Additional Provision'
-    hs2_ap_one: '1'
-    hs2_ap_two: '2'
+    hs2_ap: 'Additional Provision of the'
     object_to: 'Object to'
     the_bill: 'the bill'
     object_to_the_bill: 'Object to the bill'
@@ -123,14 +180,7 @@ en:
     of_the: 'of the'
     the: 'the'
     hyphen: '-'
-    # petition status
-    petition_status_pre: 'The petitioning period will open on Tuesday 30 January 2018.'
-    petition_status_active: 'The deadline is 5pm on Monday 26 February 2018.'
-    petition_status_post: 'The deadline has passed.'
-    ap_petition_status_pre: 'The petitioning period will open on Thursday 29th March 2018.'
-    ap_petition_status_active: 'The deadline is 5pm on Friday 27 April 2018.'
-    ap_petition_status_post: 'The deadline has passed.'
-      
+    hb_s3_bucket: 'https://s3-eu-west-1.amazonaws.com/web1live.static-assets-public/_hybrid-bills/documents/'
     # help and support
     help_support: 'help and support'
     help_support_a: 'For more information email'
@@ -184,31 +234,15 @@ en:
     # home page
     show:
       overview: 'overview'
-      overview_a_bill: 'Any individual, group of individuals, organisation or group of organisations affected by the High Speed Rail (West Midlands to Crewe) Bill can object to it.'
-      overview_a_ap: 'Any individual, group of individuals, organisation or group of organisations affected by Additional Provision 1 of the High Speed Rail (West Midlands to Crewe) Bill can object to it'
       overview_b: 'To find out more about the Bill, visit the'
       overview_c: 'High Speed Two (HS2) Limited website'
       overview_post: 'For the latest updates, visit the'
-      object_bill: 'objecting to the bill'
-      object_ap: 'Objecting to Additional Provision 1'
-      object_bill_a_bill: 'To object to the High Speed Rail (West Midlands to Crewe) Bill'
-      object_bill_a_ap: 'To object to Additional Provision 1 of the High Speed Rail (West Midlands to Crewe) Bill'
-      object_bill_a: 'you will need to download and complete our petition template. You can do this by petitioning on our website or by email, post or in person.'
-      object_bill_b_bill: 'the Bill.'
-      object_bill_b_ap: 'Additional Provision 1.'
-      object_bill_b: 'We will ask for your name, address and examples of how you’re affected by'
-      object_bill_c: 'The petition does not require any signatures.'
-      object_bill_pre: 'For more information on how to object, visit the'
+      objecting_c: 'The petition does not require any signatures.'
+      objecting_pre: 'For more information on how to object, visit the'
       contact_details: 'contact details'
       contact_details_a: 'We will ask you to tell us who should be contacted about your petition. This main contact can be you or someone else, for example a friend, family member or lawyer.'
       contact_details_b: 'The main contact will receive all petition communications. They will usually be invited to give evidence about it to the'
       after_sending_petition: 'after sending your petition'
-      after_sending_petition_a: 'Once we’ve received your petition we’ll ask you to pay a £20 admin fee.'
-      after_sending_petition_a_ap: ', unless you paid it when objecting to the original bill'
-      after_sending_petition_b: 'We’ll publish your petition on our website. This will include your name and address.'
-      after_sending_petition_c: 'We’ll send your petition to HS2 Ltd, who may contact you to discuss it.'
-      after_sending_petition_d: 'We’ll also send your petition to the Department for Transport (DfT). They can challenge it if they don’t believe you are affected by'
-      after_sending_petition_e: 'You will usually be invited to give evidence to the committee about your petition. Hearings are scheduled for spring/summer 2018.'
       something_went_wrong: 'Sorry, something went wrong. Please try again later. If the problem continues call us on 020 7219 3250 or email: prbohoc@parliament.uk.'
     # petition by email, post or in person pages
     email:
@@ -288,15 +322,9 @@ en:
     submission-complete:
       title: 'thank you for your petition'
       petition_ref: 'your petition reference is'
-      petition_ref_a: 'This petition reference and the information on this page will be sent to'
+      petition_ref_a: 'The information on this page will be sent to'
       petition_ref_b: 'in the next 15 minutes.'
       what_next: 'what happens next'
-      what_next_a: 'We’ll email you within 14 days about how to pay the £20 admin fee.'
-      what_next_ap: ', unless you paid it when objecting to the original bill'
-      what_next_b: 'We’ll publish your petition on our website. This will include your name and address.'
-      what_next_c: 'We’ll send your petition to HS2 Ltd, who may contact you to discuss it.'
-      what_next_d: 'We’ll also send your petition to the Department for Transport (DfT). They can challenge it if they don’t believe you are affected by'
-      what_next_e: 'You will usually be invited to give evidence to the committee about your petition. Hearings are scheduled for spring/summer 2018.'
       withdrawing: 'withdrawing your petition'
       withdrawing_a: 'You can withdraw your petition by emailing us at'
       withdrawing_b: 'Anyone named on a petition can withdraw from the petition, leaving the remaining petitioners to continue with it.'
@@ -341,6 +369,19 @@ en:
   cookies_disabled_b: 'are blocked.'
   cookies_disabled_c: 'Allow all cookies to petition online.'
   cookies_disabled_d: 'If you don’t want to allow all cookies, you can'
+
+  # global groups translations
+  committee: 'committee'
+  joint_committee: 'Joint (Commons and Lords)'
+  chair: 'chair'
+
+  # local groups shared_translations
+  groups:
+    show:
+      about_the: 'about the'
+      mp_for: 'MP for'
+      member_of: 'member of the'
+      contact_us: 'contact us'
 
   # global people translations
   mp: 'MP'
@@ -449,8 +490,6 @@ en:
       check_mp_alternative: 'Check if this is your MP'
       correct_mp: '%{name} is the MP for the postcode entered.'
       incorrect_mp: '%{name} is not the MP for the postcode entered.  Your MP is '
-      link_to_original: 'This is our beta website, pages are being tested and improved. You can view %{link} on the current website.'
-      link_to_original_version: 'a version of this page'
     image:
       figcaption: 'The official MP portraits are %{link}'
       available_download: 'available to download'
@@ -540,11 +579,6 @@ en:
     website: 'website'
     twitter: 'twitter'
     facebook: 'facebook'
-    fallback:
-      lords:
-        email: 'contactholmember@parliament.uk'
-        phone: '020 7219 5353'
-        address: 'House of Lords, London, SW1A 0PW'
   # constituencies translations
   constituencies:
     index:
@@ -693,15 +727,6 @@ en:
   places:
     all_regions: 'All Regions.'
     region_constituencies: 'Find constituencies by region.'
-  # article translations
-  articles:
-    show:
-      related_articles: 'Related Articles'
-      collection_articles: 'Collections this article belongs to'
-  # collection translations
-  collections:
-    show:
-      in_this_section: 'In this section'
   # no content translations
   no_content:
     empty_list:

@@ -1,19 +1,13 @@
-- page_title = title("#{t('hybrid_bills.submission-complete.title').capitalize}. #{t('hybrid_bills.object_to').capitalize} #{t('hybrid_bills.the')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}")
+- page_title = title("#{t('hybrid_bills.submission-complete.title').capitalize}. #{t('hybrid_bills.id' + @business_id + '.object_title')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}")
 
 #content.section--primary{ tabindex: '0' }
   .container
     %h1
       = t('hybrid_bills.submission-complete.title').capitalize
       %span.sr-only .
-      %span= "#{t('hybrid_bills.object_to').capitalize} #{t('hybrid_bills.the')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}"
+      %span= "#{t('hybrid_bills.id' + @business_id + '.object_title')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}"
 
-    %br
     .status--highlight
-      %p.lead
-        = t('hybrid_bills.submission-complete.petition_ref').capitalize
-        %strong
-          = @petition_reference
-
       %p
         = t('hybrid_bills.submission-complete.petition_ref_a')
         %em
@@ -26,19 +20,19 @@
 
     .track--alternative
       %h3.typography--light
-        = t('hybrid_bills.submission-complete.what_next_a')
+        = "#{t('hybrid_bills.id' + @business_id + '.what_next_a')}"
 
       %h3.typography--light
-        = t('hybrid_bills.submission-complete.what_next_b')
+        = "#{t('hybrid_bills.id' + @business_id + '.what_next_b')}"
 
       %h3.typography--light
-        = t('hybrid_bills.submission-complete.what_next_c')
+        = "#{t('hybrid_bills.id' + @business_id + '.what_next_c')}"
 
       %h3.typography--light
-        = "#{t('hybrid_bills.submission-complete.what_next_d')} #{t('hybrid_bills.show.object_bill_b_bill')}"
+        = "#{t('hybrid_bills.id' + @business_id + '.what_next_d')}"
 
       %h3.typography--light
-        = t('hybrid_bills.submission-complete.what_next_e')
+        = "#{t('hybrid_bills.id' + @business_id + '.what_next_e')}"
 
 %section
   .container

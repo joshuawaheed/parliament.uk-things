@@ -1,4 +1,4 @@
-- page_title = title("#{t('hybrid_bills.object_to').capitalize} #{t('hybrid_bills.the')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}")
+- page_title = title("#{t('hybrid_bills.id' + @business_id + '.object_title')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}")
 
 #content.section--primary{ tabindex: '0' }
   .container
@@ -15,13 +15,13 @@
         %p= t('javascript_disabled')
 
     .status--highlight
-      %p= t('hybrid_bills.petition_status_active')
+      %p= "#{t('hybrid_bills.id' + @business_id + '.petition_status_active')}"
 
 %section
   .container
     %h2= t('.overview').capitalize
 
-    %p= t('.overview_a_bill')
+    %p= "#{t('hybrid_bills.id' + @business_id + '.overview_a')}"
 
     %p
       = t('.overview_b')
@@ -33,13 +33,13 @@
 
 %section
   .container
-    %h2= t('.object_bill').capitalize
+    %h2= "#{t('hybrid_bills.id' + @business_id + '.objecting_subtitle')}"
 
-    %p= "#{t('.object_bill_a_bill')} #{t('.object_bill_a')}"
+    %p= "#{t('hybrid_bills.id' + @business_id + '.objecting_a')}"
 
-    %p= "#{t('.object_bill_b')} #{t('.object_bill_b_bill')}"
+    %p= "#{t('hybrid_bills.id' + @business_id + '.objecting_b')}"
 
-    %p= t('.object_bill_c')
+    %p= t('.objecting_c')
 
 %section
   .container
@@ -61,19 +61,19 @@
 
     .track--alternative
       %h3.typography--light
-        = t('.after_sending_petition_a')
+        = "#{t('hybrid_bills.id' + @business_id + '.after_sending_petition_a')}"
 
       %h3.typography--light
-        = t('.after_sending_petition_b')
+        = "#{t('hybrid_bills.id' + @business_id + '.after_sending_petition_b')}"
 
       %h3.typography--light
-        = t('.after_sending_petition_c')
+        = "#{t('hybrid_bills.id' + @business_id + '.after_sending_petition_c')}"
 
       %h3.typography--light
-        = "#{t('.after_sending_petition_d')} #{t('.object_bill_b_bill')}"
+        = "#{t('hybrid_bills.id' + @business_id + '.after_sending_petition_d')}"
 
       %h3.typography--light
-        = t('.after_sending_petition_e')
+        = "#{t('hybrid_bills.id' + @business_id + '.after_sending_petition_e')}"
 
     .section--major
       %noscript

@@ -1,11 +1,11 @@
-- page_title = title("#{t('hybrid_bills.email.writing_petition').capitalize} #{t('hybrid_bills.hyphen')} #{t('hybrid_bills.organisation')}. #{t('hybrid_bills.object_to').capitalize} #{t('hybrid_bills.the')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}")
+- page_title = title("#{t('hybrid_bills.email.writing_petition').capitalize} #{t('hybrid_bills.hyphen')} #{t('hybrid_bills.organisation')}. #{t('hybrid_bills.id' + @business_id + '.object_title')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}")
 
 #content.hero.theme--grey-4{ tabindex: '0' }
   .container
     %h1
       = "#{t('hybrid_bills.email.writing_petition').capitalize} #{t('hybrid_bills.hyphen')} #{t('hybrid_bills.organisation')}"
       %span.sr-only .
-      %span= "#{t('hybrid_bills.object_to').capitalize} #{t('hybrid_bills.the')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}"
+      %span= "#{t('hybrid_bills.id' + @business_id + '.object_title')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}"
 
     %h2.typography--light
       = "#{t('hybrid_bills.step_2').capitalize} #{t('hybrid_bills.step_1_2')}"
@@ -41,7 +41,7 @@
           .list--details
             %h3= t('hybrid_bills.help_support_template').capitalize
 
-            %a{ href: 'https://s3-eu-west-1.amazonaws.com/web1live.static-assets-public/_hybrid-bills/documents/HS2-Phase-2a-Petition-Pack-Organisation.doc', class: 'btn--primary' }
+            %a{ href: "#{t('hybrid_bills.hb_s3_bucket')}#{t('hybrid_bills.id' + @business_id + '.template_offline_org')}", class: 'btn--primary' }
               = render partial: 'pugin/icons/download'
               = t('user_forms.word_download_button')
 

@@ -1,17 +1,17 @@
-- page_title = title("#{t('hybrid_bills.object_to').capitalize} #{t('hybrid_bills.the')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}")
+- page_title = title("#{t('hybrid_bills.id' + @business_id + '.object_title')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}")
 
 #content.section--primary{ tabindex: '0' }
   .container
     %h1= page_title
 
     .status--highlight
-      %p= t('hybrid_bills.petition_status_pre')
+      %p= "#{t('hybrid_bills.id' + @business_id + '.petition_status_pre')}"
 
 %section
   .container
     %h2= t('hybrid_bills.show.overview').capitalize
 
-    %p= t('hybrid_bills.show.overview_a_bill')
+    %p= "#{t('hybrid_bills.id' + @business_id + '.overview_a')}"
 
     %p
       = t('hybrid_bills.show.overview_b')
@@ -23,10 +23,10 @@
 
 %section
   .container
-    %h2= t('hybrid_bills.show.object_bill').capitalize
+    %h2= "#{t('hybrid_bills.id' + @business_id + '.objecting_subtitle')}"
 
     %p
-      = t('hybrid_bills.show.object_bill_pre')
+      = t('hybrid_bills.show.objecting_pre')
       = succeed "." do
         = link_to 'http://www.parliament.uk/business/committees/committees-a-z/commons-select/high-speed-rail-west-midlands-crewe-bill-select-committee-commons', target: '_blank' do
           = "#{t('hybrid_bills.hs2_committee')} #{t('hybrid_bills.hs2_website')}"

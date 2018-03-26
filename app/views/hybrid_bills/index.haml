@@ -45,29 +45,24 @@
 
     %p= t('.object_hybrid_bill_c')
 
-
 %section
   .container
     %h2= t('.current_hybrid_bills').capitalize
 
     %ol.list--block
+
       %li
         .list--details
-          %h3= link_to(("#{t('hybrid_bills.hs2_bill_ap')} #{t('hybrid_bills.hs2_bill').capitalize}"), hybrid_bill_path('2'))
-
-          %p= t('hybrid_bills.ap_petition_status_pre')      
+          %h3= link_to(("#{t('hybrid_bills.hs2_ap')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}"), hybrid_bill_path('2'))
+          %p= t('hybrid_bills.id2.petition_status_pre')
 
 %section
   .container
     %h2= t('.past_hybrid_bills').capitalize
 
     %ol.list--block
+
       %li
         .list--details
           %h3= link_to(("#{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}"), hybrid_bill_path('1'))
-
-          %p= t('hybrid_bills.petition_status_post')
-
-        
-
-     
+          %p= t('hybrid_bills.id1.petition_status_post')

@@ -1,11 +1,11 @@
-- page_title = title("#{t('hybrid_bills.group_individuals_owned').capitalize} #{t('hybrid_bills.pet_details')}. #{t('hybrid_bills.object_to').capitalize} #{t('hybrid_bills.the')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}")
+- page_title = title("#{t('hybrid_bills.group_individuals_owned').capitalize} #{t('hybrid_bills.pet_details')}. #{t('hybrid_bills.id' + @business_id + '.object_title')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}")
 
 #content.hero.theme--grey-4{ tabindex: '0' }
   .container
     %h1
       = "#{t('hybrid_bills.group_individuals_owned').capitalize} #{t('hybrid_bills.pet_details')}"
       %span.sr-only .
-      %span= "#{t('hybrid_bills.object_to').capitalize} #{t('hybrid_bills.the')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}"
+      %span= "#{t('hybrid_bills.id' + @business_id + '.object_title')} #{t('hybrid_bills.hs2')} #{t('hybrid_bills.hs2_bill').capitalize}"
 
     %h2.typography--light
       = "#{t('hybrid_bills.step_3').capitalize} #{t('hybrid_bills.step_1_5')}"
