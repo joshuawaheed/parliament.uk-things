@@ -385,6 +385,14 @@ en:
   # global constituency translations
   constituency: 'constituency'
   constituency_plural: 'constituencies'
+
+
+  # global groups translations
+  committee: 'committee'
+  joint_committee: 'Joint (Commons and Lords)'
+  chair: 'chair'
+
+
   # global party translations
   party: 'party'
   party_plural: 'parties'
@@ -615,6 +623,17 @@ en:
       former_constituency: 'This is a former constituency. %{current_constituencies_link}.'
       current_constituencies_link: 'view current constituencies'
       constituency_map_fallback: 'A map of the constituency is available. To view it JavaScript must enabled.'
+
+
+  #groups translations
+  groups:
+    show:
+      about_the: 'about the'
+      mp_for: 'MP for'
+      member_of: 'member of the'
+      contact_us: 'contact us'
+
+
   # parties translations
   parties:
     index:

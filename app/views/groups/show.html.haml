@@ -1,35 +1,70 @@
-#content.section--primary{ tabindex: "0" }
-  .container
-  - if @group.joint?
-    %h1= "#{title(@group.formal_body_name)}"  if @group.formal_body_name.present?
-    %h2= "Joint (Commons and Lords) #{@formal_body_type.name} committee"
-    %h3= "#{@group.date_range}"
+- page_title = title("#{@group.formal_body_name}")
 
-  - else
-    %h1= 'This is the else block'
-    %h1= "#{title(@group.formal_body_name)}"
-    %h3= "#{@house.name}"
+- if @group.formal_body_name.present?
 
-  %h1= 'About the committee'
-  %h3= "#{@group.formal_body_remit}"
+  #content.section--primary{ tabindex: '0' }
+    .container
+      %h1= page_title
 
-  %h1= 'Committee members'
+      %p.lead
+        - if @group.joint?
+          = "#{t('joint_committee')} #{@formal_body_type.name} #{t('committee')}"
+        - else
+          - if @house.name == 'House of Commons'
+            = "#{t('commons')} #{@formal_body_type.name} #{t('committee')}"
+          - else
+            = "#{t('lords')} #{@formal_body_type.name} #{t('committee')}"
 
-  - if @group.has_chair?
-    %h2= "#{@person.display_name}"
-    %h3= 'Committee chair'
-    %h3= "image id for member is #{@person.image_id}"
+  - if @group.formal_body_remit.present?
+    %section
+      .container
+        %h2= "#{t('.about_the').capitalize} #{t('committee')}"
+        %p= "#{@group.formal_body_remit}"
 
-  %h3= "#{@party.name} MP for #{@constituency.name}"
+  %section
+    .container
+      %h2= "#{t('committee').capitalize} #{t('member_plural')}"
 
-  %h2= "number of committee members: #{@group.member_count}"
+      - if @group.has_chair?
+        %ol.list--block
+          %li
+            - if Pugin::Feature::Bandiera.show_list_images?
+              %figure
+                %a{href: "/people/#{@person.graph_id}", tabindex: "-1"}
+                  %picture
+                    - if @person.image_id != "placeholder"
+                      %img{ src: "#{ENV['IMAGE_SERVICE_URL']}/#{@person.image_id}.jpeg?crop=CU_1:1&width=186&quality=80", alt: "#{@person.display_name}" }
+                    - else
+                      %img{ src: "#{Pugin::ASSET_LOCATION_URL}/#{Pugin::ASSET_VERSION}/images/placeholder_members_image.png", alt: "" }
 
-  %h1= 'Contact us'
+            .list--details
+              %h2
+                %a{href: "/people/#{@person.graph_id}"}= @person.display_name
+              %p= "#{t('committee').capitalize} #{t('chair')}"
+              %p
+                - if @house.name == 'House of Commons'
+                  = "#{@party.name} #{t('.mp_for')} #{@constituency.name}"
+                - else
+                  = "#{@party.name} #{t('.member_of')} #{@house.name}"
 
-  - @group.contact_points.each do |contact_point|
-    - if contact_point.email.present?
-      %h2= "Email: #{contact_point.email}"
-    - if contact_point.phone_number.present?
-      %h2= "Email: #{contact_point.email}"
-  %h2= "Address: #{@group.formal_body_name}, #{@postal_address.full_address}"
+      %p= link_to "#{t('view_all').capitalize} #{@group.member_count} #{t('committee')} #{t('member_plural')}", "/groups/#{@group.graph_id}/memberships/current"
 
+  %section
+    .container
+      %h2= "#{t('.contact_us').capitalize}"
+
+      .block
+        %dl.list--definition
+
+          - @group.contact_points.each do |contact_point|
+
+            - if contact_point.email.present?
+              %dt= "#{t('contact_points.email').capitalize}:"
+              %dd= link_to "#{contact_point.email}", "mailto:#{contact_point.email}"
+
+            - if contact_point.phone_number.present?
+              %dt= "#{t('contact_points.phone').capitalize}:"
+              %dd= link_to "#{contact_point.phone_number}", "tel:#{contact_point.phone_number.gsub(/\s+/, "")}"
+
+          %dt= "#{t('contact_points.address').capitalize}:"
+          %dd= "#{@group.formal_body_name}, #{@postal_address.full_address}"
